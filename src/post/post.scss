@@ -1,0 +1,27 @@
+.post {
+  list-style-type: none;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid black;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-descr {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &-btn {
+    width: 120px;
+    height: 32px;
+    background: #282c34;
+    color: white;
+    border: none;
+  }
+}

@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  &-input {
+    width: 49%;
+    height: 32px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+}

@@ -1,17 +1,12 @@
 import React, {useState} from 'react';
 import PostItem from "../post-item/PostItem";
+import './post.scss'
 
-const Post = () => {
-  const [posts, setPosts] = useState([
-    {id: 1, title: 'Title', body: 'Description'},
-    {id: 2, title: 'Title', body: 'Description'},
-    {id: 3, title: 'Title', body: 'Description'},
-  ])
-
+const Post = (props) => {
   return (
     <ul className='post'>
       <h1 style={{textAlign: 'center', marginBottom: '24px'}}>Posts title</h1>
-      {posts.map((post) => <PostItem post={post} key={post.id}/>)}
+      {props.list.map((post, index) => <PostItem post={post} index={index + 1} key={post.id}/>)}
     </ul>
   );
 };
