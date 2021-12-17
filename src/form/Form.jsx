@@ -8,15 +8,17 @@ const Form = ({create}) => {
 
   function addNewPost (e) {
     e.preventDefault();
-    const newPost = {
-      id: Date.now(),
-      title,
-      body,
-    }
 
-    create(newPost);
-    setTitle('');
-    setBody('');
+    if (title && body) {
+      const newPost = {
+        id: Date.now(),
+        title,
+        body,
+      }
+      create(newPost);
+      setTitle('');
+      setBody('');
+    }
   }
 
   return (
