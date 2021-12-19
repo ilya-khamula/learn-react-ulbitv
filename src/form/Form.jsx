@@ -15,6 +15,7 @@ const Form = ({create}) => {
         title,
         body,
       }
+
       create(newPost);
       setTitle('');
       setBody('');
