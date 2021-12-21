@@ -9,7 +9,7 @@ const PostItem = (props) => {
         <h2 className='post-title'>{props.index}. {title}</h2>
         <h2 className='post-descr'>{body}</h2>
       </div>
-      <button className='post-btn'>Delete</button>
+      <button onClick={() => props.del(props.post)} className='post-btn'>Delete</button>
     </li>
   );
 };

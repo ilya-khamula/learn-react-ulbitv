@@ -6,7 +6,7 @@ const Post = (props) => {
   return (
     <ul className='post'>
       <h1 style={{textAlign: 'center', marginBottom: '24px'}}>Posts title</h1>
-      {props.list.map((post, index) => <PostItem post={post} index={index + 1} key={post.id}/>)}
+      {props.list.map((post, index) => <PostItem post={post} index={index + 1} del={props.del} key={post.id}/>)}
     </ul>
   );
 };

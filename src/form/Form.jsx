@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import FormButton from "../form-button/FormButton";
 import "./form.scss";
 
-const Form = ({create}) => {
+const Form = (props) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -16,7 +16,7 @@ const Form = ({create}) => {
         body,
       }
 
-      create(newPost);
+      props.create(newPost);
       setTitle('');
       setBody('');
     }
